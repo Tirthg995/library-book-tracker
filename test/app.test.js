@@ -120,7 +120,7 @@ test('book can be issued and returned', async () => {
 
 test('returns 404 when issuing a non-existent book', async () => {
     const response = await fetch(
-        'http://localhost:3000/api/books/9999/issue',
+        `${baseUrl}/api/books/9999/issue`,
         {
             method: 'POST'
         }
@@ -135,7 +135,7 @@ test('returns 404 when issuing a non-existent book', async () => {
 
 test('returns 404 when returning a non-existent book', async () => {
     const response = await fetch(
-        'http://localhost:3000/api/books/9999/return',
+        `${baseUrl}/api/books/9999/return`,
         {
             method: 'POST'
         }
@@ -149,7 +149,7 @@ test('returns 404 when returning a non-existent book', async () => {
 });
 
 test('rejects a book with zero copies', async () => {
-    const response = await fetch('http://localhost:3000/api/books', {
+    const response = await fetch(`${baseUrl}/api/books`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -165,7 +165,7 @@ test('rejects a book with zero copies', async () => {
 });
 
 test('rejects a book with a blank title', async () => {
-    const response = await fetch('http://localhost:3000/api/books', {
+    const response = await fetch(`${baseUrl}/api/books`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

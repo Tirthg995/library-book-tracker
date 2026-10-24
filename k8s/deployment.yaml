@@ -17,8 +17,8 @@ spec:
       containers:
         - name: library-book-tracker
           # Jenkins overrides this tag on every run with `kubectl set image`.
-          # Replace <your-dockerhub-username> with your Docker Hub username.
-          image: <your-dockerhub-username>/library-book-tracker:latest
+          # Replace tirthg995 with your Docker Hub username.
+          image: tirthg995/library-book-tracker:latest
           ports:
             - containerPort: 3000
           readinessProbe:

@@ -1,0 +1,20 @@
+{
+  "name": "library-book-tracker",
+  "version": "1.0.0",
+  "description": "Library Book Tracker for Cloud Computing and DevOps",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test",
+    "lint": "eslint ."
+  },
+  "keywords": [],
+  "author": "Aditya Agashe",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0"
+  }
+}
